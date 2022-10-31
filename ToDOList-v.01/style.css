@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');:root{
+    --main-color: #4d307c;
+    --second-color: #fefefe;
+    --text-color-1: #f0eef8;
+    --text-coloe-2: black;
+    --box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+    list-style-type: none;text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+html{
+    overflow-x: hidden;   
+}
+body{
+    font-family:'Comfortaa', cursive;
+}
+section{
+    max-width: 780px;
+    margin: auto;
+    min-height: 100vh;
+    /* background-color: aqua; */
+    padding: 1vh 0;
+}
+.sub-container {
+    width: 100%;
+    height: 100%;
+}
+.pad6{
+    padding:0 1.6rem;
+}
+.pad66{
+    padding:1.4rem;
+}
+header {
+    width: 100%;
+    height: 15vh;
+    background-color: var(--second-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--text-color-1);
+}
+article {
+    width: 100%;
+    height: 82vh;
+    background-color: var(--second-color);
+    margin-top: 1vh;
+    background-color: var(--main-color);
+    color: var(--text-color-1);
+    position: relative;
+    scroll-behavior: smooth;
+}
+button{
+    cursor: pointer;
+}
+h3{
+    font-size: 2rem;
+}
+p {
+    font-size: 1.1rem;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear-button {
+    position: absolute;
+    bottom: .7rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.clear-btn {
+    width: 7rem;
+    padding: .4rem .6rem;
+    border-radius: .4rem;
+    border: none;
+    font-size: 1.1rem;
+}
+.add-btn{
+    width: 7rem;
+    padding: .4rem .6rem;
+    border-radius: .4rem;
+    border: none;
+    font-size: 1.1rem;
+    margin-right: .4rem;
+}
+.add-btn:hover, .clear-btn:hover{
+    box-shadow: var(--box-shadow);
+    transform: translateY(-4px);
+}
+::-webkit-scrollbar-thumb{
+    color: #4d307c;
+}
+.main-task-container{
+    width: 100%;
+    max-height: 93%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding-right: .4rem;
+}
+.task-list-container {
+    width: 100%;
+    min-height: 5rem;
+    background-color: var(--second-color);
+    color: black;
+    border-radius: .2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: .6rem;
+    margin-top: .3rem;
+}
+.task-list-container p{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+#task{
+    max-width: 80%;
+}
+.task-list-container:hover{
+    transform: translateY(-4px);
+    box-shadow: 4px 2px 8px rgba(255, 255, 255, 0.3);
+}
+.clear-task{ 
+   visibility: hidden;
+   position: absolute;
+   bottom: .3rem;
+   right: .5rem;
+   font-size: 1.4rem;
+}
+.task-list-container:hover .clear-task{
+    position: absolute;
+    bottom: .3rem;
+    right: .5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    visibility: visible;
+}
+.clear-task .fa{
+    margin-right: .4rem;
+}
+#task-time{
+    font-size: .9rem;
+}
+/* task-sub */
+.task-sub {
+    position: absolute;
+    top: 0;
+    left: -400%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.task-sub.open{
+    left: 0;
+
+}
+.task-sub-container {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    align-items: left;
+}
+#task-input {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: .4rem;
+    color: white;
+    background-color: var(--main-color);
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    margin-bottom: .5rem;
+}
+#set-time{
+    width: 40%;
+    height: 2rem;
+    border: none;
+    border-radius: .4rem;
+    color: white;
+    background-color: var(--main-color);
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    margin-bottom: .5rem;
+}
+#task-submit {
+    width: 25%;
+    padding: .2rem .6rem;
+    font-size: 1.1rem;
+    border-radius: .4rem;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+.close-task-cont{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+.close-task-cont .fa{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.close-task-cont .fa:hover{
+    color: red;
+}
+@media(max-width: 480px){
+    *{
+        font-size: 85%;
+    }
+}
